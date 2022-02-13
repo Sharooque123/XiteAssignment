@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MusicVideosDataTask" extends="Task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="content" type="node" />
+	</interface>
+
+	<script type="text/brightscript"
+		uri="pkg:/source/ApiHandler/ApiHandler.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/source/Constants/Constants.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/source/AppUtilities/Utilities.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/components/NetworkUtils/Tasks/MusicVideosDataTask/MusicVideosDataTask.brs" />
+</component>

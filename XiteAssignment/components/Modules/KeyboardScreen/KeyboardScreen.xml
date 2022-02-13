@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="KeyboardScreen" extends="BaseGroup"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="keyboardText" type="String" alwaysNotify="true"
+			onChange="showNativeKeyboard" />
+		<field id="parent" type="node" alwaysNotify="true" />
+	</interface>
+
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/KeyboardScreen/KeyboardScreen.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/source/AppUtilities/Utilities.brs" />
+
+	<children>
+		<CustomBar id="background" translation="[0,0]"></CustomBar>
+
+		<Rectangle id="keyboardContainer" width="1450" height="630"
+			translation="[235,225]" color="#161616">
+			<Keyboard id="keyboard" translation="[20,20]"
+				showTextEditBox="true" visible="true" focusedKeyColor="0xff0000ff"></Keyboard>
+
+			<!-- *************** Done Button Box Starts Here ************** -->
+			<Rectangle id="doneButtonContainer" width="100" height="50"
+				translation="[675,510]" color="#838383">
+				<Button id="doneButton" height="80" translation="[0,0]"
+					textFont="font:LargeSystemFont" iconUri="" focusedIconUri=""
+					focusBitmapUri="pkg:/images/fake_transparent"
+					focusFootprintBitmapUri="pkg:/images/fake_transparent" />
+
+				<Label id="doneLabel" text="Done" height="50" width="100"
+					translation="[0,0]" horizAlign="center" vertAlign="center"
+					color="#FFFFFF" font="font:SmallestSystemFont">
+				</Label>
+			</Rectangle>
+			<!-- *************** Done Button Box Ends Here ************** -->
+
+		</Rectangle>
+	</children>
+</component>

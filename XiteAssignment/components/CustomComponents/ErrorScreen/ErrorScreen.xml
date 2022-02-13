@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ErrorScreen" extends="BaseGroup"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript"
+		uri="pkg:/components/CustomComponents/ErrorScreen/ErrorScreen.brs" />
+
+	<children>
+		<CustomBar id="background" translation="[0,0]"></CustomBar>
+
+		<!-- *************** Error Box Starts Here ************** -->
+		<Rectangle id="errorBox" width="650" height="200"
+			translation="[635,440]" color="#FFFFFF">
+
+			<Label id="errorTitle" horizAlign="left" translation="[30,30]"
+				width="200" color="#000000" vertAlign="center" text="Sorry"
+				font="font:SmallBoldSystemFont">
+			</Label>
+
+			<Label id="errorDescription" horizAlign="left"
+				translation="[30,110]" width="650" color="#838383" numLines="2"
+				maxLines="2" lineSpacing="2" wrap="true" ellipsizeOnBoundary="true"
+				vertAlign="center" isTextEllipsized="true"
+				text="Content you are looking for is not available. Please try some other content"
+				font="font:SmallestSystemFont">
+			</Label>
+		</Rectangle>
+		<!-- *************** Error Box Ends Here ************** -->
+	</children>
+</component>

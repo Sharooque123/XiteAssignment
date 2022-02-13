@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="DropDownComponent" extends="BaseGroup"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="contentType" type="String" alwaysNotify="true" />
+		<field id="parent" type="node" alwaysNotify="true" />
+		<field id="dropDownContent" type="nodearray" alwaysNotify="true"
+			onChange="onDropDownContentReceived" />
+		<field id="dropDownStates" type="roarray" alwaysNotify="true" />
+	</interface>
+	<script type="text/brightscript"
+		uri="pkg:/components/CustomComponents/DropDown/DropDownComponent.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/source/AppUtilities/Utilities.brs" />
+
+	<children>
+		<CustomBar id="background" translation="[0,0]"></CustomBar>
+		<CheckList id="dropDownList"
+			vertFocusAnimationStyle="floatingFocus" numRows="11">
+		</CheckList>
+
+		<!-- *************** Done Button Box Starts Here ************** -->
+		<Rectangle id="doneButtonContainer" width="100" height="50"
+			translation="[910,1000]" color="#838383">
+
+			<Button id="doneButtton" height="50" translation="[0,0]"
+				iconUri="" focusedIconUri=""
+				focusBitmapUri="pkg:/images/fake_transparent"
+				focusFootprintBitmapUri="pkg:/images/fake_transparent" />
+
+			<Label id="doneLabel" horizAlign="center" translation="[10,0]"
+				width="80" color="#FFFFFF" height="50" vertAlign="center"
+				text="Done" font="font:SmallestSystemFont">
+			</Label>
+		</Rectangle>
+		<!-- *************** Done Button Box Ends Here ************** -->
+
+		<Label id="hint" horizAlign="right" translation="[1210,10]"
+			width="700" color="#FFFFFF" height="30" vertAlign="center"
+			text="Use left/right key when you are done with selection"
+			font="font:SmallestSystemFont">
+		</Label>
+	</children>
+</component>
+

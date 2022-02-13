@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MovieGridItemLayout" extends="Group"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="itemContent" type="node"
+			onChange="itemContentChanged" />
+	</interface>
+
+	<script type="text/brightscript"
+		uri="pkg:/components/CustomComponents/MovieGrid/MovieGridItemLayout.brs" />
+
+	<children>
+		<Rectangle id="parentRectangle" width="430" height="350"
+			translation="[0,0]" color="#000000">
+
+			<Poster id="musicPoster" width="430" height="200"
+				translation="[0,0]" loadWidth="430" loadHeight="200"
+				loadDisplayMode="limitSize" />
+
+			<!-- *************** Music Info Box Starts Here ************** -->
+			<Rectangle id="musicInfoContainer" width="430" height="150"
+				translation="[0,200]" color="#FFFFFF">
+
+				<Label id="musicArtistLabel" horizAlign="center"
+					translation="[5,10]" width="420" color="#000000" numLines="2"
+					maxLines="2" height="70" lineSpacing="2" wrap="true"
+					ellipsizeOnBoundary="true" vertAlign="top" isTextEllipsized="true"
+					text="" font="font:SmallestBoldSystemFont">
+				</Label>
+
+				<Label id="musicTitleLabel" horizAlign="center"
+					translation="[5,85]" width="420" color="#808080" numLines="2"
+					maxLines="2" height="70" lineSpacing="2" wrap="true"
+					ellipsizeOnBoundary="true" vertAlign="top" isTextEllipsized="true"
+					text="" font="font:SmallestSystemFont">
+				</Label>
+			</Rectangle>
+			<!-- *************** Music Info Box Ends Here ************** -->
+
+		</Rectangle>
+	</children>
+</component>

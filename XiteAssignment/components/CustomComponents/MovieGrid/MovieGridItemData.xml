@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MovieGridItemData" extends="ContentNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <interface>
+        <field id="musicTitle" type="string" />
+        <field id="musicArtist" type="string" />
+        <field id="musicPosterUrl" type="string" />
+    </interface>
+</component>

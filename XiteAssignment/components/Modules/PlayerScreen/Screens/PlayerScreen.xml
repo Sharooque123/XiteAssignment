@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="PlayerScreen" extends="BaseGroup"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="configureVideo" type="Boolean" alwaysNotify="true"
+			onChange="onConfigureVideo" />
+	</interface>
+
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/PlayerScreen/Screens/PlayerScreen.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/PlayerScreen/ViewModel/PlayerScreenViewModel.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/source/Constants/Constants.brs" />
+
+	<children>
+		<Rectangle id="parentRectangle" width="1920" height="1080"
+			translation="[0,0]" color="#000000">
+			<Video id="videoPlayer" enableScreenSaverWhilePlaying="false"
+				enableUI="true" width="1920" height="1080" translation="[0,0]" />
+		</Rectangle>
+	</children>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="Status" extends="ContentNode"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<interface>
+		<field id="error" type="boolean" />
+		<field id="genres" type="nodearray" />
+		<field id="videos" type="nodearray" />
+		<field id="videosByReleaseYears" type="nodearray" />
+	</interface>
+</component>

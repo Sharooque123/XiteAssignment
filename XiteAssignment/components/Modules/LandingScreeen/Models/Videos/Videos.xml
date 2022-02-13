@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="Videos" extends="ContentNode"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<interface>
+		<field id="id" type="Integer" />
+		<field id="artist" type="String" />
+		<field id="title" type="String" />
+		<field id="release_year" type="Integer" />
+		<field id="genre_id" type="Integer" />
+		<field id="image_url" type="String" />
+	</interface>
+</component>

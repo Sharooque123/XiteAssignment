@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//components/CustomComponents/CustomBar/CustomBar.xml=UTF-8
+encoding//components/CustomComponents/DropDown/DropDownComponent.xml=UTF-8
+encoding//components/CustomComponents/ErrorScreen/ErrorScreen.xml=UTF-8
+encoding//components/CustomComponents/MovieGrid/MovieGrid.xml=UTF-8
+encoding//components/CustomComponents/MovieGrid/MovieGridItemData.xml=UTF-8
+encoding//components/CustomComponents/MovieGrid/MovieGridItemLayout.xml=UTF-8
+encoding//components/Modules/KeyboardScreen/KeyboardScreen.xml=UTF-8
+encoding//components/Modules/LandingScreeen/Models/Genres/Genres.xml=UTF-8
+encoding//components/Modules/LandingScreeen/Models/ReleaseYears/ReleaseYears.xml=UTF-8
+encoding//components/Modules/LandingScreeen/Models/Status/Status.xml=UTF-8
+encoding//components/Modules/LandingScreeen/Models/Videos/Videos.xml=UTF-8
+encoding//components/NetworkUtils/Tasks/MusicVideosDataTask/MusicVideosDataTask.xml=UTF-8
+encoding/manifest=UTF-8

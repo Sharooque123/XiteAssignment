@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="BaseGroup" extends="Group"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="dismiss" type="Boolean" alwaysNotify="true" />
+	</interface>
+
+	<script type="text/brightscript"
+		uri="pkg:/components/CustomComponents/BaseGroup/BaseGroup.brs" />
+
+	<children>
+	</children>
+</component>

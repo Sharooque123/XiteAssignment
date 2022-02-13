@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LandingScreen" extends="BaseGroup"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="genres" type="nodearray" alwaysNotify="true" />
+		<field id="releaseYears" type="nodearray" alwaysNotify="true" />
+		<field id="releaseYearStates" type="roarray" alwaysNotify="true"
+			onChange="onReleaseYearStatesChanged" />
+		<field id="genreStates" type="roarray" alwaysNotify="true"
+			onChange="onGenreStatesChanged" />
+		<field id="searchKey" type="String" alwaysNotify="true"
+			onChange="onSearchChanged" />
+		<field id="searchSource" type="nodearray" alwaysNotify="true" />
+		<field id="pageContent" type="nodearray" alwaysNotify="true"
+			onChange="onPageContentReceived" />
+	</interface>
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/LandingScreeen/Screens/LandingScreen.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/LandingScreeen/ViewModel/LandingScreenViewModel.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/source/AppUtilities/Utilities.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/LandingScreeen/Extensions/FilterExtensionForGenres.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/LandingScreeen/Extensions/FilterExtensionForReleaseYears.brs" />
+	<script type="text/brightscript"
+		uri="pkg:/components/Modules/LandingScreeen/Extensions/FilterExtensionForSearch.brs" />
+
+	<children>
+		<Rectangle id="parentRectangle" width="1920" height="1080"
+			translation="[0,0]" color="#000000">
+
+			<!-- *************** Search Bar Starts Here ************** -->
+			<Rectangle id="searchTextBox" width="1520" height="50"
+				translation="[50,20]" color="#838383">
+
+				<Button id="searchButtton" height="50" translation="[0,0]"
+					iconUri="" focusedIconUri=""
+					focusBitmapUri="pkg:/images/fake_transparent"
+					focusFootprintBitmapUri="pkg:/images/fake_transparent" />
+
+				<Label id="searchLabel" horizAlign="left" translation="[10,0]"
+					width="1500" color="#FFFFFF" height="50" vertAlign="center"
+					isTextEllipsized="true" text="Search content here...."
+					font="font:SmallestSystemFont">
+				</Label>
+			</Rectangle>
+			<!-- *************** Search Bar Ends Here ************** -->
+
+			<!-- *************** Release Year Box Starts Here ************** -->
+			<Rectangle id="releaseYearBox" width="600" height="50"
+				translation="[1270,110]" color="#838383">
+
+				<Button id="releaseYearButtton" height="50"
+					translation="[0,0]" iconUri="" focusedIconUri=""
+					focusBitmapUri="pkg:/images/fake_transparent"
+					focusFootprintBitmapUri="pkg:/images/fake_transparent" />
+
+				<Label id="releaseYearLabel" horizAlign="left"
+					translation="[10,0]" width="585" color="#FFFFFF" height="50"
+					vertAlign="center" isTextEllipsized="true" text="Select year"
+					font="font:SmallestSystemFont">
+				</Label>
+			</Rectangle>
+			<!-- *************** Release Year Box Ends Here ************** -->
+
+			<!-- *************** Genre Box Starts Here ************** -->
+			<Rectangle id="genresBox" width="700" height="50"
+				translation="[50,110]" color="#838383">
+
+				<Button id="genresButtton" height="50" translation="[0,0]"
+					iconUri="" focusedIconUri=""
+					focusBitmapUri="pkg:/images/fake_transparent"
+					focusFootprintBitmapUri="pkg:/images/fake_transparent" />
+
+				<Label id="genresLabel" horizAlign="left" translation="[10,0]"
+					width="685" color="#FFFFFF" height="50" vertAlign="center"
+					isTextEllipsized="true" text="Select genre"
+					font="font:SmallestSystemFont">
+				</Label>
+			</Rectangle>
+			<!-- *************** Genre Box Ends Here ************** -->
+
+			<!-- *************** Refresh Box Starts Here ************** -->
+			<Rectangle id="refreshBox" width="130" height="50"
+				translation="[1738,20]" color="#838383">
+
+				<Button id="refreshButtton" height="50" translation="[0,0]"
+					iconUri="" focusedIconUri=""
+					focusBitmapUri="pkg:/images/fake_transparent"
+					focusFootprintBitmapUri="pkg:/images/fake_transparent" />
+
+				<Label id="refreshLabel" horizAlign="center"
+					translation="[0,0]" width="130" color="#FFFFFF" height="50"
+					vertAlign="center" isTextEllipsized="true" text="Refresh"
+					font="font:SmallestSystemFont">
+				</Label>
+			</Rectangle>
+			<!-- *************** Refresh Box Ends Here ************** -->
+
+			<MovieGrid id="movieGrid" translation="[50,200]"></MovieGrid>
+		</Rectangle>
+	</children>
+</component>

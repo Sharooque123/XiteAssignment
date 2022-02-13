@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="CustomBar" extends="Group"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<script type="text/brightscript"
+		uri="pkg:/components/CustomComponents/CustomBar/CustomBar.brs" />
+
+	<children>
+		<Rectangle id="transparentBackground" width="1920"
+			height="1080" translation="[0,0]" color="#000000" opacity="0.95"></Rectangle>
+	</children>
+</component>
